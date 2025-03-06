@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventbrite Widget</title>
+</head>
+<body style="margin:0;padding:0;overflow:hidden;">
+  <div id="eventbrite-widget-container-1272480215579"></div>
+
+  <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
+
+  <script type="text/javascript">
+    var exampleCallback = function() {
+      console.log('Encomenda finalizada!');
+    };
+
+    window.EBWidgets.createWidget({
+      widgetType: 'checkout',
+      eventId: '1272480215579',
+      iframeContainerId: 'eventbrite-widget-container-1272480215579',
+      iframeContainerHeight: 425,
+      onOrderComplete: exampleCallback
+    });
+  </script>
+</body>
+</html>
